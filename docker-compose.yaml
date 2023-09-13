@@ -1,9 +1,7 @@
-version: '3.2'
+version: '3'
 services:
-    tg_next:
+    nextjs:
         build: .
-        ports:
-            - 3000:3000
     nginx:
         build: ./nginx
         ports:
