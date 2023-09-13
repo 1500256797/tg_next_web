@@ -37,3 +37,4 @@ jobs:
           docker rmi -f tg_next_web
           docker-compose up -d
 
+
