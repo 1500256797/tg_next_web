@@ -34,5 +34,6 @@ jobs:
           cd /root/tg_next
           docker-compose down
           # delete tg_next_web_app
-          docker rmi -f root_tg_bot
+          docker rmi -f tg_next_web
           docker-compose up -d
+
