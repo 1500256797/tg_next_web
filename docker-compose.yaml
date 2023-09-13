@@ -3,7 +3,7 @@ services:
     tg_next:
         build: .
         ports:
-            - '3000:3000'
+            - 3000:3000
     nginx:
         build: ./nginx
         ports:
