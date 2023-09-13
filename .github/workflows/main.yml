@@ -22,7 +22,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         source: './'
-        target: /root/tg_next
+        target: /tg_next
 
     - name: SSH to server and restart application
       uses: appleboy/ssh-action@master
@@ -31,10 +31,10 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         script: |
-          cd /root/tg_next
+          cd /tg_next
           docker-compose down
           # delete tg_next_web_app
-          docker rmi -f tg_next_web
+          docker rmi -f tg_next_tg_next
           docker-compose up -d
 
 
