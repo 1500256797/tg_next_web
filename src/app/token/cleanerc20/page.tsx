@@ -18,10 +18,7 @@ export default function Page() {
       const handleSubmit = (e:any) => {
         e.preventDefault();
         console.log(JSON.stringify(formData, null, 2));
-        Telegram.WebApp.sendData(JSON.stringify(formData, null, 2));
-        
-
-
+        window.Telegram.WebApp.sendData(JSON.stringify(formData, null, 2));
       };
   return (
     <>
