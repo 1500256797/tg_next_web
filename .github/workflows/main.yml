@@ -32,9 +32,12 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         script: |
           cd /tg_next
+          # stop container 
           docker-compose down
           # delete tg_next_web_app
           docker rmi -f tg_next_tg_next
+          # delete nginx 
+          docker rmi -f tg_next_nginx
           docker-compose up -d
 
 
