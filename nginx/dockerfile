@@ -8,7 +8,9 @@ RUN rm /etc/nginx/conf.d/*
 COPY ./default.conf /etc/nginx/conf.d/
 
 # copy ssl to /etc/ssl
-COPY ./ssl /etc/ssl
+COPY /ssl/nginx_bundle_9173987293fc.crt /etc/
+#从腾讯云获取到的第二个文件的全路径
+COPY /ssl/tgbots.club_key.key /etc/
 # Expose the listening port
 EXPOSE 80
 
