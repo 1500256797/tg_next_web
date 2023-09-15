@@ -24,7 +24,7 @@ export default function Page() {
     <>
         <Script
             src="https://telegram.org/js/telegram-web-app.js?1"
-            strategy="lazyOnload"
+            strategy="beforeInteractive"
             onLoad={() => {
                 console.log("load telegram bot js")}
             }
