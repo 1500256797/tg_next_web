@@ -1,6 +1,6 @@
 "use client"; 
 import React, { useState } from 'react'
-
+import Script from 'next/script';
 
 export default function Page() {
 
@@ -22,7 +22,10 @@ export default function Page() {
 
   return (
     <>
-
+            <Script
+            src="https://telegram.org/js/telegram-web-app.js?1"
+            strategy="lazyOnload"
+        /> 
     <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
     <h2 className="text-2xl font-semibold mb-6">表单</h2>
     <form onSubmit={handleSubmit}>
