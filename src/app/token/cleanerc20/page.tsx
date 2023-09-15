@@ -20,14 +20,12 @@ export default function Page() {
         console.log(JSON.stringify(formData, null, 2));
         window.Telegram.WebApp.sendData(JSON.stringify(formData, null, 2));
       };
+
   return (
     <>
         <Script
             src="https://telegram.org/js/telegram-web-app.js?1"
-            strategy="beforeInteractive"
-            onLoad={() => {
-                console.log("load telegram bot js")}
-            }
+            strategy="lazyOnload"
         /> 
     <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
     <h2 className="text-2xl font-semibold mb-6">表单</h2>
